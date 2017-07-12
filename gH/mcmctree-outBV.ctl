@@ -1,8 +1,5 @@
-          seed = -1
        seqfile = ../data/10s.phys 
       treefile = ../data/10s.tree
-      mcmcfile = mcmc.txt
-       outfile = out.txt
 
          ndata = 2
        seqtype = 0    * 0: nucleotides; 1:codons; 2:AAs
