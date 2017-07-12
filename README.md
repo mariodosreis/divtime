@@ -13,6 +13,6 @@ File description:
 
 `mcmc/mcmctree.ctl`: Control file for MCMCTree to perform MCMC sampling from the posterior distribution of divergence times and rates using the approximate likelihood method.
 
-`prior/mcmctree-prior.ctl`: Control file for MCMCTree to perform MCMC sampling from the prior distribuiton.
+`prior/mcmctree-pr.ctl`: Control file for MCMCTree to perform MCMC sampling from the prior distribuiton.
 
 `R/analysis.R`: Examples of how to summarise the MCMC output and MCMC diagnostics.
