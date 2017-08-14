@@ -21,6 +21,7 @@ names(mcmc1)
 t.mean1 <- apply(mcmc1[,2:10], 2, mean) * 100
 t.mean2 <- apply(mcmc2[,2:10], 2, mean) * 100
 # good convergence is indicated when the points fall on the y = x line.
+par(mfrow=c(2,2))
 plot(t.mean1, t.mean2, main="a) Posterior times, r 1 vs. r 2"); abline(0, 1)
 
 # we can calculate the effective sample sizes (ESS) of the parameters
@@ -49,7 +50,7 @@ p.mean1 <- apply(mcmc1.p[,2:10], 2, mean) * 100
 p.mean2 <- apply(mcmc2.p[,2:10], 2, mean) * 100
 plot(p.mean1, p.mean2); abline(0, 1)
 
-# par(mai=c(.3,.4,.3,.1)) # this changes the margin sizes
+# par(mai=c(.4,.5,.4,.2)) # this changes the margin sizes
 par(mfcol=c(3,3))
 for(i in 9:1) {
   dpr <- density(mcmc1.p[,i+1], adj=.1) # prior
