@@ -3,7 +3,8 @@
 
          ndata = 2
        seqtype = 0    * 0: nucleotides; 1:codons; 2:AAs
-       usedata = 3    * 0: no data (prior); 1:exact likelihood; 2:approximate likelihood; 3:out.BV (in.BV)
+       usedata = 3    * 0: no data (prior); 1:exact likelihood; 
+                      * 2: approximate likelihood; 3:out.BV (in.BV)
          clock = 2    * 1: global clock; 2: independent rates; 3: correlated rates
 
          model = 4    * 0:JC69, 1:K80, 2:F81, 3:F84, 4:HKY85
