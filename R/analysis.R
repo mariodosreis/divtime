@@ -49,9 +49,14 @@ p.mean1 <- apply(mcmc1.p[,2:10], 2, mean) * 100
 p.mean2 <- apply(mcmc2.p[,2:10], 2, mean) * 100
 plot(p.mean1, p.mean2); abline(0, 1)
 
-par(mfrow=c(3,3))
+# par(mai=c(.3,.4,.3,.1)) # this changes the margin sizes
+par(mfcol=c(3,3))
 for(i in 9:1) {
-  plot(density(mcmc1.p[,i+1], adj=.1), main=paste("t_n",i+10,sep=""), xlab="")
-  lines(density(mcmc1[,i+1], adj=.1), col="grey")
+  dpr <- density(mcmc1.p[,i+1], adj=.1) # prior
+  dPr <- density(mcmc1[,i+1], adj=.1)   # Posterior
+  xl <- range(c(dpr$x, dPr$x))
+  yl <- range(c(dpr$y, dPr$y))
+  plot(dpr, main=paste("t_n",i+10,sep=""), xlab="", ylab="", las=1, xlim=xl, ylim=yl, col="grey")
+  lines(dPr, col="black")
 }
 
