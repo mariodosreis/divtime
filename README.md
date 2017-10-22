@@ -5,9 +5,13 @@ on divergence time estimation using genome-scale data.
 
 File description:
 
-`data/10s.phys`: Alignment of protein-coding genes in two partitions.
+`data/10s.phys`: Alignment of protein-coding genes of 10 species in two partitions.
 
-`data/10s.tree`: Tree with fossil calibrations.
+`data/10s.tree`: Tree of 10 species with fossil calibrations.
+
+`data/330s.phys`: Alignment of 1st and 2nd sites of mitochondrial protein-coding genes of 330 species in one partition.
+
+`data/330s.tree`: Tree of 330 species.
 
 `gH/mcmctree-outBV.ctl`: Control file for MCMCTree necessary to set up calculation fo the gradient and Hessian for approximate likelihood calculation.
 
