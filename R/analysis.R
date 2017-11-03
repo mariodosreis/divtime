@@ -10,10 +10,10 @@ mcmc1 <- read.table("../mcmc/mcmc1.txt", head=TRUE)
 mcmc2 <- read.table("../mcmc/mcmc2.txt", head=TRUE)
 
 # each data frame contains 15 columns:
-# MCMC generation number, 9 node ages (divergence times), 2 mean mutation rates, 
+# MCMC generation number, 9 node ages (divergence times), 2 mean mutation rates,
 # 2 rate drift coefficients, and sample log-likelihood values
 names(mcmc1)
-# [1] "Gen"      "t_n11"    "t_n12"    "t_n13"    "t_n14"    "t_n15"    "t_n16"    "t_n17"   
+# [1] "Gen"      "t_n11"    "t_n12"    "t_n13"    "t_n14"    "t_n15"    "t_n16"    "t_n17"
 # [9] "t_n18"    "t_n19"    "mu1"      "mu2"      "sigma2_1" "sigma2_2" "lnL"
 
 # to check for convergence of the MCMC runs, we calculate the posterior
@@ -34,7 +34,7 @@ cbind(mean.mcmc, ess.mcmc, var.mcmc, se.mcmc)
 
 # notice that ancient times (t_n11 and t_n12) have small ESS
 # trace plots are useful to visualise the MCMC and split problems
-plot(mcmc1$t_n19, ty='l', main="b) trace of t_n19") 
+plot(mcmc1$t_n19, ty='l', main="b) trace of t_n19")
 plot(mcmc1$t_n11, ty='l', main="c) trace of t_n11")
 plot(density(mcmc1$t_n11), main="d) histogram of t_n11, r 1 vs. r2")
 lines(density(mcmc2$t_n11), lty=2)
@@ -57,7 +57,7 @@ for(i in 9:1) {
   dPr <- density(mcmc1[,i+1], adj=.1)   # Posterior
   xl <- range(c(dpr$x, dPr$x))
   yl <- range(c(dpr$y, dPr$y))
-  plot(dpr, main=paste("t_n",i+10,sep=""), xlab="", ylab="", las=1, xlim=xl, ylim=yl, col="grey")
+  plot(dpr, main=paste("t_n",i+10,sep=""), xlab="", ylab="", las=1, xlim=xl, ylim=yl, col="darkgrey")
   lines(dPr, col="black")
 }
 
