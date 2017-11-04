@@ -1,5 +1,5 @@
-This is the source code for MCMCTree v. 4.9e, which was used to
+This is the source code for MCMCTree and BASEML version 4.9e, which were used to
 prepare the tutorial.
 
-MCMCTree is part of the PAML package available from bit.ly/ziheng-paml.
-Please refer to this for the latest version of the program.
+MCMCTree and BASEML are part of the PAML package available from bit.ly/ziheng-paml.
+Please refer to this for the latest version of the programs.
