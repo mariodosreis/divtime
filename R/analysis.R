@@ -21,8 +21,15 @@ names(mcmc1)
 t.mean1 <- apply(mcmc1[,2:10], 2, mean) * 100
 t.mean2 <- apply(mcmc2[,2:10], 2, mean) * 100
 # good convergence is indicated when the points fall on the y = x line.
+
 par(mfrow=c(2,2))
 plot(t.mean1, t.mean2, main="a) Posterior times, r 1 vs. r 2"); abline(0, 1)
+# notice that ancient times (t_n11 and t_n12) have small ESS
+# trace plots are useful to visualise the MCMC and split problems
+plot(mcmc1$t_n19, ty='l', main="b) trace of t_n19")
+plot(mcmc1$t_n11, ty='l', main="c) trace of t_n11")
+plot(density(mcmc1$t_n11), main="d) histogram of t_n11, r 1 vs. r2")
+lines(density(mcmc2$t_n11), lty=2)
 
 # we can calculate the effective sample sizes (ESS) of the parameters
 # (you need to have the coda package installed for this to work)
@@ -32,13 +39,9 @@ var.mcmc <- apply(mcmc1[,-1], 2, var)
 se.mcmc <- sqrt(var.mcmc / ess.mcmc)
 cbind(mean.mcmc, ess.mcmc, var.mcmc, se.mcmc)
 
-# notice that ancient times (t_n11 and t_n12) have small ESS
-# trace plots are useful to visualise the MCMC and split problems
-plot(mcmc1$t_n19, ty='l', main="b) trace of t_n19")
-plot(mcmc1$t_n11, ty='l', main="c) trace of t_n11")
-plot(density(mcmc1$t_n11), main="d) histogram of t_n11, r 1 vs. r2")
-lines(density(mcmc2$t_n11), lty=2)
-
+# oldpar <- par()
+# mai <- oldpar$mai; mai[3] <- .35; par(mai = mai)
+# mai <- oldpar$mai; mai[1] <- .35; mai[2] <- .35; mai[3] <- .45; par(mai = mai)
 
 # ###############################################
 # PRIOR:
