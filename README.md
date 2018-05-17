@@ -13,6 +13,8 @@ File description:
 
 `data/330s.tree`: Tree of 330 species.
 
+`doc/phylogenomic-dating.pdf`: Book chapter with tutorial.
+
 `gH/mcmctree-outBV.ctl`: Control file for MCMCTree necessary to set up calculation fo the gradient and Hessian for approximate likelihood calculation.
 
 `mcmc/mcmctree.ctl`: Control file for MCMCTree to perform MCMC sampling from the posterior distribution of divergence times and rates using the approximate likelihood method.
