@@ -5,13 +5,13 @@ on divergence time estimation using genome-scale data.
 
 File description:
 
-`data/10s.phys`: Alignment of protein-coding genes of 10 species in two partitions.
+`data/10s.phys`: Alignment of protein-coding genes of 10 primate species in two partitions.
 
-`data/10s.tree`: Tree of 10 species with fossil calibrations.
+`data/10s.tree`: Tree of 10 primate species with fossil calibrations.
 
-`data/330s.phys`: Alignment of 1st and 2nd sites of mitochondrial protein-coding genes of 330 species in one partition.
+`data/330s.phys`: Alignment of 1st and 2nd sites of mitochondrial protein-coding genes of 330 primate species in one partition.
 
-`data/330s.tree`: Tree of 330 species.
+`data/330s.tree`: Tree of 330 primate species.
 
 `doc/phylogenomic-dating.pdf`: Book chapter with tutorial.
 
