@@ -22,3 +22,5 @@ File description:
 `prior/mcmctree-pr.ctl`: Control file for MCMCTree to perform MCMC sampling from the prior distribuiton.
 
 `R/analysis.R`: Examples of how to summarise the MCMC output and MCMC diagnostics.
+
+`src/`: Source code of MCMCTree v4.9e.
