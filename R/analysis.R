@@ -23,6 +23,7 @@ t.mean2 <- apply(mcmc2[,2:10], 2, mean) * 100
 # good convergence is indicated when the points fall on the y = x line.
 
 par(mfrow=c(2,2))
+# posterior times for run 1 vs run 2:
 plot(t.mean1, t.mean2, main="a) Posterior times, r 1 vs. r 2"); abline(0, 1)
 # notice that ancient times (t_n11 and t_n12) have small ESS
 # trace plots are useful to visualise the MCMC and split problems
@@ -42,6 +43,21 @@ cbind(mean.mcmc, ess.mcmc, var.mcmc, se.mcmc)
 # oldpar <- par()
 # mai <- oldpar$mai; mai[3] <- .35; par(mai = mai)
 # mai <- oldpar$mai; mai[1] <- .35; mai[2] <- .35; mai[3] <- .45; par(mai = mai)
+
+# If you have the ape and bppr packages installed, you can make a densitree plot
+# To get bppr, try:
+# devtools::install_github("dosreislab/bppr")
+par(mfrow=c(1,1))
+pri10s.tree <- ape::read.tree("../data/10s.tree")
+bppr::mcmc2densitree(pri10s.tree, mcmc1 * 100, "t_", thin=0.05, col="blue", alpha=0.01, pfrac=0.2)
+title(xlab="Divergence time (Ma)")
+
+# Some phylogentic programs such as BEAST or MrBayes output a list of trees in 
+# Newick format, instead of a table. If you want, you can convert MCMCtree's
+# MCMC output into a list of Newick trees as with BEAST or MrBayes
+mcmc.trees <- bppr::mcmc2multiphylo(pri10s.tree, mcmc1, "t_", thin=0.05)
+# You can write the trees to a file (note this file can be potentially very big)
+ape::write.tree(mcmc.trees, file="many.tree")
 
 # ###############################################
 # PRIOR:

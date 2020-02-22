@@ -24,3 +24,7 @@ File description:
 `R/analysis.R`: Examples of how to summarise the MCMC output and MCMC diagnostics.
 
 `src/`: Source code of MCMCTree v4.9e.
+
+A pretty densitree of the 10 species analyse in this tutorial:
+
+![](/R/pri10s.jpg)
