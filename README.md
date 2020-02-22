@@ -25,6 +25,6 @@ File description:
 
 `src/`: Source code of MCMCTree v4.9e.
 
-A pretty densitree of the 10 species analyse in this tutorial:
+A pretty densitree of the 10 species analysed in this tutorial:
 
 ![](/R/pri10s.jpg)
