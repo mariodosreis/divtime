@@ -10,6 +10,6 @@ gH/rates
 gH/rub
 */mcmc*.txt
 */out*.txt
-*/FigTree.tre
+*/FigTree*.tre
 */*.BV
 .Rproj.user
