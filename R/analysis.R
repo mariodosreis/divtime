@@ -55,6 +55,7 @@ title(xlab="Divergence time (Ma)")
 # Some phylogentic programs such as BEAST or MrBayes output a list of trees in 
 # Newick format, instead of a table. If you want, you can convert MCMCtree's
 # MCMC output into a list of Newick trees as with BEAST or MrBayes
+pri10s.tree$node.label <- NULL # remove node labels (optional)
 mcmc.trees <- bppr::mcmc2multiphylo(pri10s.tree, mcmc1, "t_", thin=0.05)
 # You can write the trees to a file (note this file can be potentially very big)
 ape::write.tree(mcmc.trees, file="many.tree")
