@@ -7,7 +7,7 @@ File description:
 
 `data/10s.phys`: Alignment of protein-coding genes of 10 primate species in two partitions.
 
-`data/10s.tree`: Tree of 10 primate species with fossil calibrations.
+`data/10s.tree` and `data/10s-nocal.tree`: Tree of 10 primate species with and without fossil calibrations respectively.
 
 `data/330s.phys`: Alignment of 1st and 2nd sites of mitochondrial protein-coding genes of 330 primate species in one partition.
 

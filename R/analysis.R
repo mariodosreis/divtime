@@ -48,7 +48,8 @@ cbind(mean.mcmc, ess.mcmc, var.mcmc, se.mcmc)
 # To get bppr, try:
 # devtools::install_github("dosreislab/bppr")
 par(mfrow=c(1,1))
-pri10s.tree <- ape::read.tree("../data/10s.tree")
+#pri10s.tree <- ape::read.tree("../data/10s.tree") # does not work with some ape versions
+pri10s.tree <- ape::read.tree("../data/10s-nocal.tree")
 bppr::mcmc2densitree(pri10s.tree, mcmc1 * 100, "t_", thin=0.05, col="blue", alpha=0.01, pfrac=0.2)
 title(xlab="Divergence time (Ma)")
 
